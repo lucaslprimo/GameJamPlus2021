@@ -86,7 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kickForce: 20
   cooldownKick: 1
-  paintActionKey: 113
+  paintActionKey: 324
   isPlayer: 1
   minVelocityTakingBackControl: 3
   crosshair: {fileID: 3874105844383304437}
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   channelingTime: 1
   isPlayer: 1
-  paintActionKey: 101
+  paintActionKey: 323
   crosshair: {fileID: 3874105844383304437}
   OnInterruptPainting:
     m_PersistentCalls:
@@ -10142,7 +10142,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5, y: 5}
+  m_SizeDelta: {x: 8, y: 8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7475489894327479491
 CanvasRenderer:

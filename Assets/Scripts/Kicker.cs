@@ -54,7 +54,6 @@ namespace gamejamplus2020_t9
         {
             if (Time.time >= timeToKick)
             {
-                Debug.Log("Kicking");
                 this.target = target;
                 timeToKick = Time.time + cooldownKick;
 
@@ -62,7 +61,6 @@ namespace gamejamplus2020_t9
                 if (tilePainter != null)
                 {
                     tilePainter.InterruptPainting();
-                    Debug.Log("Interrupted");
                 }
 
                 shouldKick = true;

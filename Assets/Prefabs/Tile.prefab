@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaintend: 0
   fillColor: {r: 0.16731933, g: 0.7128009, b: 0.754717, a: 0}
-  originalColor: {r: 0.30980393, g: 0.30980393, b: 0.30980393, a: 0}
+  originalColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0}
   highlightColor: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 0}
   isHighlighted: 0
 --- !u!64 &5610863271909805972

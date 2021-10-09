@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace gamejamplus2020_t9
 {
@@ -7,21 +8,18 @@ namespace gamejamplus2020_t9
     public class TilePainter : MonoBehaviour
     {
         [SerializeField] float channelingTime = 2f;
-        [SerializeField] float cooldownTime = 1f;
         [SerializeField] bool isPlayer;
         [SerializeField] KeyCode paintActionKey;
 
         [SerializeField] Crosshair crosshair;
-
-        [SerializeField] LayerMask groundLayer;
         float paintingFinishedTime;
         private Tile currentTile;
 
         private bool isPainting;
 
-        public event Action OnInterruptPainting;
-        public event Action OnStartPainting;
-        public event Action OnFinishPaiting;
+        public UnityEvent OnInterruptPainting;
+        public UnityEvent OnStartPainting;
+        public UnityEvent OnFinishPaiting;
 
         private void Update()
         {
@@ -107,12 +105,6 @@ namespace gamejamplus2020_t9
             {
                 currentTile = hit.collider.GetComponent<Tile>();
             }
-        }
-
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.black;
-            Gizmos.DrawRay(transform.position, Vector3.down * 2f);
-        }
+        }   
     }
 }

@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419899fa57ee6cf40aa90ad76013c2ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPaintend: 0
+  isPainted: 0
   fillColor: {r: 0.16731933, g: 0.7128009, b: 0.754717, a: 0}
   originalColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0}
   highlightColor: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 0}
@@ -107,7 +107,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5610863271909805974}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0f1f50552fb51184b84bfa1f3a6edb42, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4

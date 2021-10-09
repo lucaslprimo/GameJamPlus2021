@@ -10360,6 +10360,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4311812481453549695, guid: 5a867fb6758065348806fb39ca3c35f4, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4311812481453549695, guid: 5a867fb6758065348806fb39ca3c35f4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b39618a77af8eb045bae64b7da5cfe41, type: 2}
@@ -10443,12 +10447,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5911568321900312883, guid: 501db3d626c58204e93039d91daebe38, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5911568321900312883, guid: 501db3d626c58204e93039d91daebe38, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6b405e177f1d84945a061a304796da91, type: 2}
     - target: {fileID: 919132149155446097, guid: 501db3d626c58204e93039d91daebe38, type: 3}
       propertyPath: m_Name
       value: BracoR
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095106624264406690, guid: 501db3d626c58204e93039d91daebe38, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4095106624264406690, guid: 501db3d626c58204e93039d91daebe38, type: 3}
       propertyPath: m_Materials.Array.data[0]

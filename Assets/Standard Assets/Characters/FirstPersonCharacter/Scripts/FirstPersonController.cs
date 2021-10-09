@@ -138,6 +138,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayJumpSound()
         {
+            transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("isWalk", false);
+            transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<Animator>().SetBool("isWalk", false);
+
             m_AudioSource.clip = m_JumpSound;
             m_AudioSource.Play();
         }
@@ -158,6 +161,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_NextStep = m_StepCycle + m_StepInterval;
 
+
             PlayFootStepAudio();
         }
 
@@ -168,6 +172,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 return;
             }
+            transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("isWalk", true);
+            transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<Animator>().SetBool("isWalk", true);
+
             // pick & play a random footstep sound from the array,
             // excluding sound at index 0
             int n = Random.Range(1, m_FootstepSounds.Length);
@@ -209,9 +216,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
 
+            //stop walk
+            if (horizontal == 0 && vertical == 0)
+            {
+                transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("isWalk", false);
+                transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<Animator>().SetBool("isWalk", false);
+            }
+
             bool waswalking = m_IsWalking;
 
 #if !MOBILE_INPUT
+
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
             m_IsWalking = !Input.GetKey(KeyCode.LeftShift);

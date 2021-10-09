@@ -11,6 +11,8 @@ namespace gamejamplus2020_t9
         [SerializeField] public Color fillColor;
         [SerializeField] public Color originalColor;
         [SerializeField] public Color highlightColor;
+        
+        public bool isHighlighted = false;
 
         Renderer rend;
 
@@ -23,15 +25,18 @@ namespace gamejamplus2020_t9
         public void Highlight()
         {
             rend.material.color = highlightColor;
+            isHighlighted = true;
         }
 
         public void ResetColor()
         {
+            isHighlighted = false;
             rend.material.color = originalColor;
         }
 
         public void Fill()
         {
+            isHighlighted = false;
             rend.material.color = fillColor;
             isPaintend = true;
         }

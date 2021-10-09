@@ -38,7 +38,7 @@ namespace gamejamplus2020_t9
                             lastHighlightTile.ResetColor();
                         }
 
-                        if (!hit.collider.GetComponent<Tile>().isPaintend)
+                        if (!hit.collider.GetComponent<Tile>().isPainted)
                         {
                             lastHighlightTile = hit.collider.GetComponent<Tile>();
                             lastHighlightTile.Highlight();                        
@@ -63,7 +63,7 @@ namespace gamejamplus2020_t9
             GameObject[] tiles = GameObject.FindGameObjectsWithTag("Tile");
             foreach(GameObject tileGameObj in tiles){
                 Tile tile = tileGameObj.GetComponent<Tile>();
-                if (!tile.isPaintend && !tile.isHighlighted)
+                if (!tile.isPainted && !tile.isHighlighted)
                 {
                     tile.ResetColor();
                 }

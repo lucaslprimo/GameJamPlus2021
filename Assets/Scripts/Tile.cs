@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ namespace gamejamplus2020_t9
 {
     public class Tile : MonoBehaviour
     {
-        [SerializeField] public bool isPaintend = false;
+        [SerializeField] public bool isPainted = false;
         [SerializeField] public Color fillColor;
         [SerializeField] public Color originalColor;
         [SerializeField] public Color highlightColor;
@@ -38,13 +39,19 @@ namespace gamejamplus2020_t9
         {
             isHighlighted = false;
             rend.material.color = fillColor;
-            isPaintend = true;
+            isPainted = true;
         }
 
         // Update is called once per frame
         void Update()
         {
 
+        }
+
+        internal void EraseColor()
+        {
+            isPainted = false;
+            rend.material.color = originalColor;
         }
     }
 }

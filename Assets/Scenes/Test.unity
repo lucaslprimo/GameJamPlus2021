@@ -17453,10 +17453,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyBlocker
       objectReference: {fileID: 0}
-    - target: {fileID: 2668929453340590437, guid: 9b31dccbaf730f94e830552da9c1b85f, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e63736ede5cf7244a9ed0f1831165ae6, type: 2}
     - target: {fileID: 3008509681749865115, guid: 9b31dccbaf730f94e830552da9c1b85f, type: 3}
       propertyPath: m_RootOrder
       value: 1

@@ -13,7 +13,8 @@ namespace gamejamplus2020_t9
 
         [SerializeField] Crosshair crosshair;
         float paintingFinishedTime;
-        private Tile currentTile;
+
+        Tile workingTile;
 
         private bool isPainting;
 
@@ -29,7 +30,11 @@ namespace gamejamplus2020_t9
                 {
                     if (!isPainting)
                     {
-                        PaintTile();
+                        Tile tile = GetTile();
+                        if (tile != null)
+                        {
+                            PaintTile(tile);
+                        }
                     }
                 }
                 else
@@ -41,7 +46,6 @@ namespace gamejamplus2020_t9
                 }
             }
 
-
             if (isPainting)
             {
                 if( Time.time >= paintingFinishedTime)
@@ -51,10 +55,23 @@ namespace gamejamplus2020_t9
             }
         }
 
-        public void PaintTile()
+        private Tile GetTile()
         {
-            if (IsAboveUnpaintedTile())
+            Tile tile = null;
+            RaycastHit hit;
+            hit = crosshair.GetHitObject();
+            if (hit.collider != null && hit.collider.CompareTag("Tile"))
             {
+                tile = hit.collider.GetComponent<Tile>();
+            }
+
+            return tile;
+        }
+
+        public void PaintTile(Tile tile)
+        {
+            if (!tile.isPainted) {
+                workingTile = tile;
                 StartPainting(channelingTime);
             }
         }
@@ -69,10 +86,27 @@ namespace gamejamplus2020_t9
 
         private void FinishPainting()
         {
-            currentTile.Fill();
-            resetPaintingState();
+            if (isPlayer)
+            {
+                workingTile.Fill();
+                resetPaintingState();
+            }
+            else
+            {
+                workingTile.EraseColor();
+            }
+            
             if (OnFinishPaiting != null)
                 OnFinishPaiting.Invoke();
+        }
+
+        internal void EraseTile(Tile tile)
+        {
+            if (tile.isPainted)
+            {
+                workingTile = tile;
+                StartPainting(channelingTime);
+            }
         }
 
         private void resetPaintingState()
@@ -86,25 +120,5 @@ namespace gamejamplus2020_t9
             if (OnInterruptPainting != null)
                 OnInterruptPainting.Invoke();
         }
-
-        private bool IsAboveUnpaintedTile()
-        {
-            CheckHit();
-
-            if (currentTile == null)
-                return false;
-
-            return !currentTile.isPaintend;
-        }
-
-        private void CheckHit()
-        {
-            RaycastHit hit;
-            hit = crosshair.GetHitObject();
-            if (hit.collider != null && hit.collider.CompareTag("Tile"))
-            {
-                currentTile = hit.collider.GetComponent<Tile>();
-            }
-        }   
     }
 }

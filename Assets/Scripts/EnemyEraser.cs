@@ -15,39 +15,32 @@ namespace gamejamplus2020_t9
 
         [SerializeField] TilePainter painter;
 
-        List<Tile> tiles;
         Tile targetTile = null;
         State state;
 
         enum State
         {
-            SEKKING, IDLE, ERASING, ERASE
+            SEKKING, ERASING, ERASE
         }
 
         void Start()
         {
-            painter.OnFinishPaiting.AddListener(OnFinishPainting);
-            painter.OnInterruptPainting.AddListener(OnFinishPainting);
-
-            state = State.IDLE;
-           
-            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Tile");
-            tiles = new List<Tile>();
-            foreach (GameObject gameObject in gameObjects)
-            {
-                tiles.Add(gameObject.GetComponent<Tile>());
-            }
+            state = State.SEKKING;
         }
 
         void Update()
         {
             switch (state)
             {
-                case State.IDLE:
+                case State.SEKKING:
                     float minDistance = 0;
-                   
-                    foreach (Tile tile in tiles)
+
+                    GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Tile");
+
+                    foreach (GameObject gameObj in gameObjects)
                     {
+                        Tile tile = gameObj.GetComponent<Tile>();
+
                         if (tile.isPainted)
                         {
                             if (minDistance == 0)
@@ -66,15 +59,13 @@ namespace gamejamplus2020_t9
                         }
                     }
 
-                    if (targetTile != null)
-                        state = State.SEKKING;
-
-                    break;
-                case State.SEKKING:
-                    GoToTile(targetTile);
+                    if(targetTile!=null)
+                        GoToTile(targetTile);
 
                     break;
                 case State.ERASE:
+                    painter.OnFinishPaiting.AddListener(OnFinishPainting);
+                    painter.OnInterruptPainting.AddListener(OnFinishPainting);
                     painter.EraseTile(targetTile);
                     state = State.ERASING;
                     break;
@@ -83,8 +74,11 @@ namespace gamejamplus2020_t9
 
         void OnFinishPainting()
         {
-            state = State.IDLE;
+            state = State.SEKKING;
             targetTile = null;
+
+            painter.OnFinishPaiting.RemoveListener(OnFinishPainting);
+            painter.OnInterruptPainting.RemoveListener(OnFinishPainting);
         }
 
         private float GetDistanteFromTile(Tile tile)

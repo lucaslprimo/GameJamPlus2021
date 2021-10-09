@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 5400000}
   - component: {fileID: 8200000}
+  - component: {fileID: 2402223557710342288}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: Untagged
@@ -83,10 +84,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f39d5f473aac9b441a15dd315f664566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kickForce: 0.1
+  kickForce: 20
   cooldownKick: 1
   paintActionKey: 113
   isPlayer: 1
+  minVelocityTakingBackControl: 3
   crosshair: {fileID: 3874105844383304437}
 --- !u!114 &6665887494057667319
 MonoBehaviour:
@@ -247,12 +249,12 @@ Rigidbody:
   m_GameObject: {fileID: 100000}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 0.5
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 0
 --- !u!82 &8200000
 AudioSource:
@@ -350,6 +352,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!136 &2402223557710342288
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -10445,13 +10461,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 501db3d626c58204e93039d91daebe38, type: 3}
   m_PrefabInstance: {fileID: 2014875144}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &543450651685153251 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 501db3d626c58204e93039d91daebe38, type: 3}
-  m_PrefabInstance: {fileID: 2014875144}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4328197094672531865 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4328197093195583377, guid: 501db3d626c58204e93039d91daebe38, type: 3}
+  m_PrefabInstance: {fileID: 2014875144}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &543450651685153251 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 501db3d626c58204e93039d91daebe38, type: 3}
   m_PrefabInstance: {fileID: 2014875144}
   m_PrefabAsset: {fileID: 0}

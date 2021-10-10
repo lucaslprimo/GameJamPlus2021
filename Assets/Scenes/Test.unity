@@ -6404,6 +6404,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1723571370594635136, guid: a392ec743f9b5ea448e8fb69d8b25f25, type: 3}
+      propertyPath: blinkInterval
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723571370594635136, guid: a392ec743f9b5ea448e8fb69d8b25f25, type: 3}
+      propertyPath: blinkMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: a01fd94f93a14c24d93003e26f38cabc, type: 2}
     - target: {fileID: 2841632175957288424, guid: a392ec743f9b5ea448e8fb69d8b25f25, type: 3}
       propertyPath: m_RootOrder
       value: 1

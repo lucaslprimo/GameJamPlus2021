@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{21c7c7ef-f335-4576-b1c5-5467a57a5120}">
+		<property name="name">
+			<value>WorldPainted</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7f9377a6-d738-4c8c-b515-524ee440fc81}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f940d8d4-2815-4a15-b4e3-f1e1d68f09b8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f940d8d4-2815-4a15-b4e3-f1e1d68f09b8}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<relationship name="automators">
+			<destination>{4c406ba7-c631-449a-8f93-0913f86d2cdc}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{4c406ba7-c631-449a-8f93-0913f86d2cdc}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cursorPosition</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{2f3fd790-06c6-48cf-aa6d-4f9c03e0acbc}">
+		<property name="assetPath">
+			<value>Player Stop Charge2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.49066666666666664</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9cc8bdec-9bc2-415b-98ef-708c1e5e4e2f}</destination>
+		</relationship>
+	</object>
+</objects>

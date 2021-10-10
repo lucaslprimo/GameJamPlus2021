@@ -14,11 +14,6 @@ namespace gamejamplus2020_t9
         [SerializeField] public float blinkInterval;
         private Material originalMaterial;
 
-        private bool blinking = false;
-        private float timeToBlink = 0;
-
-        Player player;
-
         Renderer rend;
 
         // Start is called before the first frame update
@@ -27,7 +22,6 @@ namespace gamejamplus2020_t9
             rend = GetComponent<Renderer>();
             originalMaterial = rend.material;
             rend.material = grayMaterial;
-            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         }
 
         public void Fill()
@@ -39,37 +33,7 @@ namespace gamejamplus2020_t9
         // Update is called once per frame
         void Update()
         {
-            if (player.playerState == Player.PlayerState.Chaser)
-            {
-                if (isPainted)
-                {
-                    if (Time.time > timeToBlink)
-                    {
-                        timeToBlink = Time.time + blinkInterval;
-                        if (blinking)
-                        {
-                            rend.material = originalMaterial;
-                        }
-                        else
-                        {
-                            rend.material = blinkMaterial;
-                        }
-
-                        blinking = !blinking;
-                    }
-                }
-            }
-            else
-            {
-                if (isPainted)
-                {
-                    rend.material = originalMaterial;
-                }
-                else
-                {
-                    rend.material = grayMaterial;
-                }
-            }
+           
         }
     }
 }

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7475157022870920326}
   - component: {fileID: 4636984668156864588}
   - component: {fileID: 4578008770131473632}
-  m_Layer: 0
+  - component: {fileID: 9003833539685451135}
+  m_Layer: 3
   m_Name: Reto
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +98,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7648891979068792779, guid: 97cdef3705cdf544e84cce652f6633e6, type: 3}
+--- !u!114 &9003833539685451135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6582323721502165401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419899fa57ee6cf40aa90ad76013c2ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPainted: 0
+  grayMaterial: {fileID: 2100000, guid: 885f9326b58119647a3a9447c77b7ca5, type: 2}

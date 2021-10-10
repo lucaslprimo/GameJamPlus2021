@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3663387262013591899}
   - component: {fileID: 1527283256935982481}
   - component: {fileID: -2210174501380917054}
-  m_Layer: 0
+  - component: {fileID: 5059070163462834981}
+  m_Layer: 3
   m_Name: Rampa
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +98,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6586172060114443403, guid: 793831a025099524ba87c0ff5515cdf0, type: 3}
+--- !u!114 &5059070163462834981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023157657554224196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419899fa57ee6cf40aa90ad76013c2ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPainted: 0
+  grayMaterial: {fileID: 2100000, guid: 885f9326b58119647a3a9447c77b7ca5, type: 2}

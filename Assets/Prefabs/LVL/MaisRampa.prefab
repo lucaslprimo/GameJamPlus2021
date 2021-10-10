@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8857953189292902298}
   - component: {fileID: 6703944733980848976}
   - component: {fileID: -615896624424504365}
-  m_Layer: 0
+  - component: {fileID: 7421498965958081850}
+  m_Layer: 3
   m_Name: MaisRampa
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +98,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7164409401369817838, guid: 68792e1add2cef04cb129e6b6e2dfc62, type: 3}
+--- !u!114 &7421498965958081850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5046791663266615941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419899fa57ee6cf40aa90ad76013c2ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPainted: 0
+  grayMaterial: {fileID: 2100000, guid: 885f9326b58119647a3a9447c77b7ca5, type: 2}

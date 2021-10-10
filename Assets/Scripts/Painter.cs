@@ -11,7 +11,6 @@ namespace gamejamplus2020_t9
 
         Paintable workingTile;
 
-
         public UnityEvent OnInterruptPainting;
         public UnityEvent OnStartPainting;
         public UnityEvent OnFinishPaiting;
@@ -28,7 +27,8 @@ namespace gamejamplus2020_t9
         public void CheckSurfacePainted()
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, 5f, groundMask))
+            Debug.DrawRay(transform.position, Vector3.down * 5f, Color.red);
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, 3f, groundMask))
             {
                 workingTile = hit.collider.GetComponent<Paintable>();
             }

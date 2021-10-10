@@ -9,6 +9,8 @@ namespace gamejamplus2020_t9
     public class Paintable : MonoBehaviour
     {
         [SerializeField] public bool isPainted = false;
+        [SerializeField] public Material grayMaterial;
+        private Material originalMaterial;
 
         Renderer rend;
 
@@ -16,13 +18,13 @@ namespace gamejamplus2020_t9
         void Start()
         {
             rend = GetComponent<Renderer>();
-            rend.material.SetFloat("_GrayscaleAmmount", 100);
+            originalMaterial = rend.material;
+            rend.material = grayMaterial;
         }
 
         public void Fill()
         {
-            rend.material.SetFloat("_GrayscaleAmmount", 0);
-                       
+            rend.material = originalMaterial;
             isPainted = true;
         }
 

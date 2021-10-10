@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7925662226183952679}
   - component: {fileID: 5339418149219331565}
   - component: {fileID: 8112543206313757411}
-  m_Layer: 0
+  - component: {fileID: -4033566556271494864}
+  m_Layer: 3
   m_Name: MaisReto
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +98,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -9105241674363726823, guid: 37e11b292940e484f85c74c8f7cdad38, type: 3}
+--- !u!114 &-4033566556271494864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5843861370710412344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419899fa57ee6cf40aa90ad76013c2ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPainted: 0
+  grayMaterial: {fileID: 2100000, guid: 885f9326b58119647a3a9447c77b7ca5, type: 2}

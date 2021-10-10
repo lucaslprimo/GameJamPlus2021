@@ -37,7 +37,6 @@ namespace gamejamplus2020_t9
         void Update()
         {
             Vector3 playerDir = player.transform.position - transform.position;
-            Debug.DrawRay(transform.position, playerDir, Color.red);
 
             if(player.playerState == Player.PlayerState.Chaser)
             {
@@ -83,8 +82,6 @@ namespace gamejamplus2020_t9
         public Vector3 GetNewWanderPoint()
         {
             int random = Random.Range(0, runPoints.Length);
-            Debug.Log(random);
-            Debug.Log(runPoints.Length);
             Vector3 result = runPoints[random].transform.position;
             
             return result;

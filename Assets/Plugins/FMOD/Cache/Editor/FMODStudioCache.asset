@@ -353,6 +353,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 0
   Exists: 0
+--- !u!114 &-7759519488986867362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/EnemyNumber
+  m_EditorClassIdentifier: 
+  Name: EnemyNumber
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &-7661623905696851202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,6 +595,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 0
   Exists: 0
+--- !u!114 &-6488336437182851484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/WorldPainted
+  m_EditorClassIdentifier: 
+  Name: WorldPainted
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &-6393310132120808978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,7 +720,7 @@ MonoBehaviour:
   Path: Assets/Art/Sounds/FMOD GameJamPlus2021/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637694875866410027
+  lastModified: 637694945477932716
   FileSizes:
   - Name: Desktop
     Value: 4785600
@@ -947,6 +991,28 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 528
+--- !u!114 &-5019976471691321127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerChargeSFX/ReleaseCharge
+  m_EditorClassIdentifier: 
+  Name: ReleaseCharge
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &-4967228725838965156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,8 +1077,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 579972356221801713}
-  - {fileID: 1005126411518368002}
+  - {fileID: -7759519488986867362}
+  - {fileID: -4515252274388797255}
   MinDistance: 0
   MaxDistance: 0
   Length: 36571
@@ -1060,6 +1126,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 0
   Exists: 0
+--- !u!114 &-4515252274388797255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/WorldPainted
+  m_EditorClassIdentifier: 
+  Name: WorldPainted
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &-4369168575394550426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1391,6 +1479,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 0
   Exists: 1
+--- !u!114 &-3409807531211397910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/WorldPainted
+  m_EditorClassIdentifier: 
+  Name: WorldPainted
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &-3376539091379866796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1404,6 +1514,28 @@ MonoBehaviour:
   m_Name: parameter:/Music/EnemyNumber
   m_EditorClassIdentifier: 
   Name: EnemyNumber
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &-3274685464288380279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/WorldPainted
+  m_EditorClassIdentifier: 
+  Name: WorldPainted
   Min: 0
   Max: 1
   Default: 0
@@ -1591,6 +1723,28 @@ MonoBehaviour:
   IsGlobal: 0
   Exists: 1
 --- !u!114 &-2506465493367422356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/EnemyNumber
+  m_EditorClassIdentifier: 
+  Name: EnemyNumber
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &-2464354629443504293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2360,7 +2514,7 @@ MonoBehaviour:
   - {fileID: -6094469846329353654}
   StringsBanks:
   - {fileID: 2502679482093211502}
-  stringsBankWriteTime: 637694875866435042
+  stringsBankWriteTime: 637694945477952659
   cacheVersion: 8
 --- !u!114 &294811066197951567
 MonoBehaviour:
@@ -2406,6 +2560,28 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 0
   Exists: 1
+--- !u!114 &580451968488700752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/WorldPainted
+  m_EditorClassIdentifier: 
+  Name: WorldPainted
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &927741739480593056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2485,6 +2661,28 @@ MonoBehaviour:
   m_Name: parameter:/Music/WorldPainted
   m_EditorClassIdentifier: 
   Name: WorldPainted
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 1
+--- !u!114 &1014191501710311006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerChargeSFX/ReleaseCharge
+  m_EditorClassIdentifier: 
+  Name: ReleaseCharge
   Min: 0
   Max: 1
   Default: 0
@@ -2777,7 +2975,7 @@ MonoBehaviour:
   Path: Assets/Art/Sounds/FMOD GameJamPlus2021/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637694875866435042
+  lastModified: 637694945477952659
   FileSizes:
   - Name: Desktop
     Value: 1714
@@ -3134,10 +3332,32 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2545750270707584911}
+  - {fileID: -6488336437182851484}
   MinDistance: 0
   MaxDistance: 0
   Length: 31976
+--- !u!114 &3604791139730385160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/EnemyNumber
+  m_EditorClassIdentifier: 
+  Name: EnemyNumber
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &3739449182203113859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3202,7 +3422,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -3510338489260216620}
+  - {fileID: 1014191501710311006}
   MinDistance: 1
   MaxDistance: 20
   Length: 3226
@@ -3559,6 +3779,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 9851
+--- !u!114 &5685009530468464876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerChargeSFX/ReleaseCharge
+  m_EditorClassIdentifier: 
+  Name: ReleaseCharge
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &5844639958060738885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3793,6 +4035,28 @@ MonoBehaviour:
   m_Name: parameter:/PlayerChargeSFX/ReleaseCharge
   m_EditorClassIdentifier: 
   Name: ReleaseCharge
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &7118836620911366891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/WorldPainted
+  m_EditorClassIdentifier: 
+  Name: WorldPainted
   Min: 0
   Max: 1
   Default: 0

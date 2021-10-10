@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace gamejamplus2020_t9
 {
@@ -12,6 +13,8 @@ namespace gamejamplus2020_t9
         [SerializeField] public bool isEnable = true;
         [SerializeField] public float powerUpDuration;
         [SerializeField] public int maxHp;
+
+        [SerializeField] Text hp;
         private float timeToStopPowerUp;
 
         public PlayerState playerState;
@@ -30,8 +33,10 @@ namespace gamejamplus2020_t9
 
         void Start()
         {
+            
             playerState = PlayerState.Runner;
             playerHP = maxHp;
+            hp.text = playerHP.ToString();
         }
 
         void Update()
@@ -61,6 +66,7 @@ namespace gamejamplus2020_t9
                 if (playerState == PlayerState.Runner)
                 {
                     playerHP -= 1;
+                    hp.text = playerHP.ToString();
                     if (playerHP == 0)
                     {
                         SceneManager.LoadScene(1);

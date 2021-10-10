@@ -70,6 +70,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 2000000}
   isEnable: 1
+  powerUpDuration: 10
+  playerState: 1
+  OnPowerUpCatched:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPlayerDies:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6665887494057667319
 MonoBehaviour:
   m_ObjectHideFlags: 0

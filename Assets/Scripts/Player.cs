@@ -12,16 +12,16 @@ namespace gamejamplus2020_t9
         [SerializeField] public Camera mainCamera;
         [SerializeField] public bool isEnable = true;
         [SerializeField] public float powerUpDuration;
-
+        [SerializeField] public int maxHp;
         private float timeToStopPowerUp;
-
-
-        private Painter painter;
 
         public PlayerState playerState;
 
+        private int playerHP;
+
         public UnityEvent OnPowerUpCatched;
         public UnityEvent OnPlayerDies;
+        public UnityEvent OnMonsterKilled;
 
         public enum PlayerState
         {
@@ -30,8 +30,8 @@ namespace gamejamplus2020_t9
 
         void Start()
         {
-            painter = gameObject.GetComponent<Painter>();
             playerState = PlayerState.Runner;
+            playerHP = maxHp;
         }
 
         void Update()
@@ -60,11 +60,24 @@ namespace gamejamplus2020_t9
             {
                 if (playerState == PlayerState.Runner)
                 {
-                    Destroy(gameObject);
+                    playerHP -= 1;
+                    if (playerHP == 0)
+                    {
+                        Destroy(gameObject);
+                        if (OnPlayerDies != null)
+                            OnPlayerDies.Invoke();
+                    }
+                    else
+                    {
+                        if (OnPowerUpCatched != null)
+                            OnPowerUpCatched.Invoke();
+                    }   
                 }
                 else
                 {
                     Destroy(other.gameObject);
+                    if (OnMonsterKilled != null)
+                        OnMonsterKilled.Invoke();
                 }
             }
         }

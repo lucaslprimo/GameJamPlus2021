@@ -72,11 +72,15 @@ MonoBehaviour:
   mainCamera: {fileID: 2000000}
   isEnable: 1
   powerUpDuration: 10
+  maxHp: 5
   playerState: 1
   OnPowerUpCatched:
     m_PersistentCalls:
       m_Calls: []
   OnPlayerDies:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMonsterKilled:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &6665887494057667319

@@ -221,6 +221,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("isWalk", false);
                 transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<Animator>().SetBool("isWalk", false);
+
+                GameObject.Find("Particle Tintas").GetComponent<TrailRenderer>().enabled = false;
+                GameObject.Find("Particle Tintas (1)").GetComponent<TrailRenderer>().enabled = false;
+            }
+            else
+            {
+                GameObject.Find("Particle Tintas").GetComponent<TrailRenderer>().enabled = true;
+                GameObject.Find("Particle Tintas (1)").GetComponent<TrailRenderer>().enabled = true;
             }
 
             bool waswalking = m_IsWalking;

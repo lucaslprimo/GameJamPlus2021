@@ -10119,7 +10119,7 @@ GameObject:
   - component: {fileID: 1338891989947573589}
   - component: {fileID: 3874105844383304437}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10209,7 +10209,7 @@ GameObject:
   - component: {fileID: 6173012277736044465}
   - component: {fileID: 5054767342379026720}
   m_Layer: 5
-  m_Name: CrossHair
+  m_Name: CrossHairCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

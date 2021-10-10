@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 947842555605715940}
   - component: {fileID: 2408762241458229712}
   - component: {fileID: 2367470351662899829}
+  - component: {fileID: 1645891878}
   m_Layer: 0
   m_Name: EnemyBlocker
   m_TagString: Enemy
@@ -104,6 +105,29 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.83, z: 0}
+--- !u!114 &1645891878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900589474026914657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/EnemyHit
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &4715302667949323405
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +420,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5960997642085333049, guid: e58568d0d81a43247ba1a3bc475d2e5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8ddddef99b62f449a2f5100909e23fb, type: 2}
+    - target: {fileID: -4302745935510907849, guid: e58568d0d81a43247ba1a3bc475d2e5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8ddddef99b62f449a2f5100909e23fb, type: 2}
     - target: {fileID: -4258411891960909470, guid: e58568d0d81a43247ba1a3bc475d2e5d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0

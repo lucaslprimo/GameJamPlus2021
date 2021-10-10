@@ -73,6 +73,7 @@ MonoBehaviour:
   navAgent: {fileID: 947842555605715940}
   minDistanceToHit: 2.2
   playerDistance: 50
+  radiusRun: 30
   layerMask:
     serializedVersion: 2
     m_Bits: 8

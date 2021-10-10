@@ -9,16 +9,18 @@ namespace gamejamplus2020_t9
     public class EnemyBlocker : MonoBehaviour
     {
         [SerializeField] NavMeshAgent navAgent;
-        [SerializeField] float minDistanceToHit = 0.5f;
-        [SerializeField] float playerDistance = 10;
-
-        [SerializeField] LayerMask layerMask;
 
         GameObject[] runPoints;
 
         public UnityEvent<GameObject> OnTryHitPlayer;
         private Vector3 runPos;
         Player player;
+        private EnemyState enemyState;
+
+        public enum EnemyState
+        {
+            WANDER, CHASE
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -27,46 +29,64 @@ namespace gamejamplus2020_t9
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
             runPoints = GameObject.FindGameObjectsWithTag("RunAwayPoint");
+
+            enemyState = EnemyState.WANDER;
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (player.isEnable)
+            Vector3 playerDir = player.transform.position - transform.position;
+            Debug.DrawRay(transform.position, playerDir, Color.red);
+
+            if(player.playerState == Player.PlayerState.Chaser)
             {
-                if (player.playerState == Player.PlayerState.Runner)
-                {
+                enemyState = EnemyState.WANDER;
+            }
+
+            switch (enemyState)
+            {
+                case EnemyState.WANDER:
+                    if(Vector3.Distance(transform.position, runPos) < 5)
+                    {
+                        runPos = GetNewWanderPoint();  
+                    }
+
+                    navAgent.SetDestination(runPos);
+
+                    CheckPlayerInSight();
+                    break;
+                case EnemyState.CHASE:
                     navAgent.SetDestination(player.transform.position);
-                }
-                else
-                {
-                    if(Vector3.Distance(transform.position, player.transform.position) < 60)
-                    {
-                        runPos = GetFarAwayPoint();
-                        navAgent.SetDestination(runPos);
-                    }
-                    else
-                    {
-                        navAgent.SetDestination(transform.position);
-                    }
-                }
+                    break;
             }
         }
 
-        public Vector3 GetFarAwayPoint()
+        private bool CheckPlayerInSight()
         {
-            float maxDistance = Vector3.Distance(runPoints[0].transform.position, transform.position);
-            Vector3 result = runPoints[0].transform.position;
-            
-            foreach(GameObject point in runPoints)
+            Vector3 playerDir = player.transform.position - transform.position;
+            RaycastHit hit;
+            if(Physics.Raycast(transform.position, playerDir, out hit))
             {
-                if(maxDistance < Vector3.Distance(point.transform.position, transform.position))
+                if (hit.collider.CompareTag("Player"))
                 {
-                    maxDistance = Vector3.Distance(point.transform.position, transform.position);
-                    result = point.transform.position;
+                    if(player.playerState!= Player.PlayerState.Chaser)
+                        enemyState = EnemyState.CHASE;
+                  
+                    return true;
                 }
             }
 
+            return false;
+        }
+
+        public Vector3 GetNewWanderPoint()
+        {
+            int random = Random.Range(0, runPoints.Length);
+            Debug.Log(random);
+            Debug.Log(runPoints.Length);
+            Vector3 result = runPoints[random].transform.position;
+            
             return result;
         }
     }

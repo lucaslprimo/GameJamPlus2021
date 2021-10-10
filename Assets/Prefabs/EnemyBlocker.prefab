@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3008509681749865115}
   - component: {fileID: 947842555605715940}
   - component: {fileID: 2408762241458229712}
-  - component: {fileID: 3776521683091568016}
   - component: {fileID: 2367470351662899829}
   m_Layer: 0
   m_Name: EnemyBlocker
@@ -49,7 +48,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -71,6 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navAgent: {fileID: 947842555605715940}
   minDistanceToHit: 2.2
+  wanderRadius: 50
   OnTryHitPlayer:
     m_PersistentCalls:
       m_Calls:
@@ -86,22 +86,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!54 &3776521683091568016
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900589474026914657}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0.5
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!136 &2367470351662899829
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -110,7 +94,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900589474026914657}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1.8

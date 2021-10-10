@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
-
+using UnityEngine.SceneManagement;
 
 namespace gamejamplus2020_t9
 {
@@ -22,6 +21,7 @@ namespace gamejamplus2020_t9
         public UnityEvent OnPowerUpCatched;
         public UnityEvent OnPlayerDies;
         public UnityEvent OnMonsterKilled;
+        public UnityEvent OnPlayerHurt;
 
         public enum PlayerState
         {
@@ -63,14 +63,15 @@ namespace gamejamplus2020_t9
                     playerHP -= 1;
                     if (playerHP == 0)
                     {
-                        Destroy(gameObject);
+                        SceneManager.LoadScene(1);
                         if (OnPlayerDies != null)
                             OnPlayerDies.Invoke();
                     }
                     else
                     {
-                        if (OnPowerUpCatched != null)
-                            OnPowerUpCatched.Invoke();
+                        Destroy(other.gameObject);
+                        if (OnPlayerHurt != null)
+                            OnPlayerHurt.Invoke();
                     }   
                 }
                 else

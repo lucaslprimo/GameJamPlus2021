@@ -12,11 +12,6 @@ namespace gamejamplus2020_t9
         Paintable workingTile;
         Player player;
 
-        public UnityEvent OnInterruptPainting;
-        public UnityEvent OnStartPainting;
-        public UnityEvent OnFinishPaiting;
-
-
         private void Start()
         {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();

@@ -43,7 +43,6 @@ namespace gamejamplus2020_t9
                     playerState = PlayerState.Runner;
                 }
             }
-           
         }
 
         private void OnTriggerEnter(Collider other)
@@ -65,10 +64,7 @@ namespace gamejamplus2020_t9
                 }
                 else
                 {
-                    if (painter.CheckSurfacePainted())
-                    {
-                        Destroy(other.gameObject);
-                    }
+                    Destroy(other.gameObject);
                 }
             }
         }

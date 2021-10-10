@@ -99,7 +99,7 @@ MonoBehaviour:
   isPainted: 0
   grayMaterial: {fileID: 2100000, guid: 885f9326b58119647a3a9447c77b7ca5, type: 2}
   blinkMaterial: {fileID: 2100000, guid: a01fd94f93a14c24d93003e26f38cabc, type: 2}
-  blinkInterval: 0.1
+  blinkInterval: 0.5
 --- !u!64 &112096253984641805
 MeshCollider:
   m_ObjectHideFlags: 0

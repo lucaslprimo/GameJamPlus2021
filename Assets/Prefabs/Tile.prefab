@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5610863271909805973}
   - component: {fileID: 5610863271909805969}
   - component: {fileID: 5610863271909805970}
-  - component: {fileID: 5610863271909805971}
   - component: {fileID: 5610863271909805972}
   m_Layer: 3
   m_Name: Tile
@@ -83,23 +82,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5610863271909805971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5610863271909805974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 419899fa57ee6cf40aa90ad76013c2ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPainted: 0
-  fillColor: {r: 0.16731933, g: 0.7128009, b: 0.754717, a: 0}
-  originalColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0}
-  highlightColor: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 0}
-  isHighlighted: 0
 --- !u!64 &5610863271909805972
 MeshCollider:
   m_ObjectHideFlags: 0

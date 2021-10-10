@@ -9,10 +9,6 @@ namespace gamejamplus2020_t9
     public class EnemyBlocker : MonoBehaviour
     {
         [SerializeField] NavMeshAgent navAgent;
-        [SerializeField] float minDistanceToHit = 0.5f;
-        [SerializeField] float playerDistance = 10;
-        [SerializeField] float radiusRun = 10;
-        [SerializeField] LayerMask layerMask;
 
         GameObject[] runPoints;
 

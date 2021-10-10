@@ -24,7 +24,7 @@ namespace gamejamplus2020_t9
             }
         }
 
-        public void CheckSurfacePainted()
+        public bool CheckSurfacePainted()
         {
             RaycastHit hit;
             Debug.DrawRay(transform.position, Vector3.down * 5f, Color.red);
@@ -32,6 +32,10 @@ namespace gamejamplus2020_t9
             {
                 workingTile = hit.collider.GetComponent<Paintable>();
             }
+
+            if (workingTile != null && workingTile.isPainted)
+                return true;
+            else return false;
         }
     }
 }

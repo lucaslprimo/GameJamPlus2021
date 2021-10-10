@@ -37,12 +37,18 @@ namespace gamejamplus2020_t9
                 if (player.playerState == Player.PlayerState.Runner)
                 {
                     navAgent.SetDestination(player.transform.position);
-                    runPos = transform.position;
                 }
                 else
                 {
-                    runPos = GetFarAwayPoint();
-                    navAgent.SetDestination(runPos);   
+                    if(Vector3.Distance(transform.position, player.transform.position) < 60)
+                    {
+                        runPos = GetFarAwayPoint();
+                        navAgent.SetDestination(runPos);
+                    }
+                    else
+                    {
+                        navAgent.SetDestination(transform.position);
+                    }
                 }
             }
         }

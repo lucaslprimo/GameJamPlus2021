@@ -13,7 +13,7 @@ namespace gamejamplus2020_t9
         void Awake()
         {
 
-            if (SceneManager.GetActiveScene().name == "Restart Scene" || SceneManager.GetActiveScene().name == "Win")
+            if (SceneManager.GetActiveScene().name == "Restart Scene" || SceneManager.GetActiveScene().name == "Win" || SceneManager.GetActiveScene().name == "Menu")
             {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.Confined;
@@ -23,7 +23,7 @@ namespace gamejamplus2020_t9
         // Update is called once per frame
         void Update()
         {
-            if (SceneManager.GetActiveScene().name == "Restart Scene" || SceneManager.GetActiveScene().name == "Win")
+            if (SceneManager.GetActiveScene().name == "Restart Scene" || SceneManager.GetActiveScene().name == "Win" || SceneManager.GetActiveScene().name == "Menu")
             {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.Confined;
@@ -56,12 +56,12 @@ namespace gamejamplus2020_t9
 
         private void StartWinScene()
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
 
         public void RestartGame()
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
 
         public void ExitGame()

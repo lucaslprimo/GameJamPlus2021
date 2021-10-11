@@ -20,7 +20,7 @@ namespace gamejamplus2020_t9
         private void Update()
         {
             CheckSurfacePainted();
-            if (workingTile != null && !workingTile.isPainted && player.playerState == Player.PlayerState.Runner)
+            if (workingTile != null && !workingTile.isPainted)
             {
                 workingTile.Fill();
             }

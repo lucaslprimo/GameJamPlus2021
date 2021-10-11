@@ -70,7 +70,7 @@ namespace gamejamplus2020_t9
                     hp.text = playerHP.ToString();
                     if (playerHP == 0)
                     {
-                        SceneManager.LoadScene(1);
+                        SceneManager.LoadScene(2);
                     }
                     else
                     {

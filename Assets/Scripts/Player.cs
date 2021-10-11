@@ -14,6 +14,7 @@ namespace gamejamplus2020_t9
         [SerializeField] public bool isEnable = true;
         [SerializeField] public float powerUpDuration;
         [SerializeField] public int maxHp;
+        [SerializeField] public GameManager gameManager;
 
         [SerializeField] Text hp;
         private float timeToStopPowerUp;
@@ -47,6 +48,15 @@ namespace gamejamplus2020_t9
                 if (Time.time >= timeToStopPowerUp)
                 {
                     playerState = PlayerState.Runner;
+
+                    gameManager.PlayMusic();
+
+                    GameObject[] powerUps = GameObject.FindGameObjectsWithTag("PowerUp");
+
+                    foreach (GameObject item in powerUps)
+                    {
+                        item.GetComponent<Collider>().enabled = true;
+                    }
                 }
             }
         }
@@ -55,6 +65,15 @@ namespace gamejamplus2020_t9
         {
             if (other.CompareTag("PowerUp"))
             {
+                GameObject[] powerUps = GameObject.FindGameObjectsWithTag("PowerUp");
+
+                foreach(GameObject item in powerUps)
+                {
+                    item.GetComponent<Collider>().enabled = false;
+                }
+
+                gameManager.StopMusic();
+
                 timeToStopPowerUp = Time.time + powerUpDuration;
                 playerState = PlayerState.Chaser;
                 Destroy(other.gameObject);

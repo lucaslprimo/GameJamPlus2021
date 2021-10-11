@@ -71,8 +71,6 @@ namespace gamejamplus2020_t9
                     if (playerHP == 0)
                     {
                         SceneManager.LoadScene(1);
-                        if (OnPlayerDies != null)
-                            OnPlayerDies.Invoke();
                     }
                     else
                     {

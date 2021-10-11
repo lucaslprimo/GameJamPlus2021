@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 947842555605715940}
   - component: {fileID: 2408762241458229712}
   - component: {fileID: 2367470351662899829}
-  - component: {fileID: 1645891878}
   m_Layer: 0
   m_Name: EnemyBlocker
   m_TagString: Enemy
@@ -71,12 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navAgent: {fileID: 947842555605715940}
-  minDistanceToHit: 2.2
-  playerDistance: 50
-  radiusRun: 30
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 8
+  animator: {fileID: 1139547080}
   OnTryHitPlayer:
     m_PersistentCalls:
       m_Calls:
@@ -106,29 +100,6 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.83, z: 0}
---- !u!114 &1645891878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900589474026914657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/EnemyHit
-  PlayEvent: 2
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &4715302667949323405
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +250,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7391168266865766335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781908799167150785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094c8a21484808c4a8c8a17f1d7b3981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8970410326963341290
 GameObject:
   m_ObjectHideFlags: 0

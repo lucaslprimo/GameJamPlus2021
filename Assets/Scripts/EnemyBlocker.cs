@@ -10,6 +10,8 @@ namespace gamejamplus2020_t9
     {
         [SerializeField] NavMeshAgent navAgent;
 
+        [SerializeField] Animator animator;
+
         GameObject[] runPoints;
 
         public UnityEvent<GameObject> OnTryHitPlayer;
@@ -25,6 +27,8 @@ namespace gamejamplus2020_t9
         // Start is called before the first frame update
         void Start()
         {
+            animator.speed = Random.Range(2f, 2.5f);
+
             runPos = transform.position;
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 

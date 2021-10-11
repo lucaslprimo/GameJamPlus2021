@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
@@ -28,6 +29,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+
+        [SerializeField] UnityEvent OnJumpStart;
+        [SerializeField] UnityEvent OnJumpLand;
+        [SerializeField] UnityEvent OnStep;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -87,9 +92,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayLandingSound()
         {
-            m_AudioSource.clip = m_LandSound;
-            m_AudioSource.Play();
-            m_NextStep = m_StepCycle + .5f;
+            OnJumpLand.Invoke();
         }
 
 
@@ -138,12 +141,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayJumpSound()
         {
-            //Player esta Pulando
-            transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("isWalk", false);
-            transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<Animator>().SetBool("isWalk", false);
-
-            m_AudioSource.clip = m_JumpSound;
-            m_AudioSource.Play();
+            OnJumpStart.Invoke();
         }
 
 
@@ -176,14 +174,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Animator>().SetBool("isWalk", true);
             transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<Animator>().SetBool("isWalk", true);
 
-            // pick & play a random footstep sound from the array,
-            // excluding sound at index 0
-            int n = Random.Range(1, m_FootstepSounds.Length);
-            m_AudioSource.clip = m_FootstepSounds[n];
-            m_AudioSource.PlayOneShot(m_AudioSource.clip);
-            // move picked sound to index 0 so it's not picked next time
-            m_FootstepSounds[n] = m_FootstepSounds[0];
-            m_FootstepSounds[0] = m_AudioSource.clip;
+            OnStep.Invoke();
         }
 
 
